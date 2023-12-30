@@ -14,8 +14,7 @@ public class RegisterationValidation {
     private CustomerDatabase database;
     private String otp ;
 
-//    @Autowired
-
+    @Autowired
     public RegisterationValidation(CustomerDatabase database) {
         this.database = database;
     }

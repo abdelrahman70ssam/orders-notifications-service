@@ -10,26 +10,15 @@ public class CustomerBSL {
     private CustomerDatabase customerDatabase ;
 
     private RegisterationValidation registerationValidation ;
-//    @Autowired
-    public CustomerBSL(CustomerDatabase customerDatabase) {
-        this.customerDatabase = customerDatabase;
-    }
-//    @Autowired
-    public CustomerBSL(){
-        customerDatabase = new CustomerDatabase();
-        loginValidation = new LoginValidation(customerDatabase);
-        registerationValidation = new RegisterationValidation(customerDatabase);
 
-    }
-//    @Autowired
-
-    public CustomerBSL(LoginValidation loginValidation) {
+    @Autowired
+    public CustomerBSL(LoginValidation loginValidation, CustomerDatabase customerDatabase, RegisterationValidation registerationValidation) {
         this.loginValidation = loginValidation;
-    }
-//    @Autowired
-    public CustomerBSL(RegisterationValidation registerationValidation) {
+        this.customerDatabase = customerDatabase;
         this.registerationValidation = registerationValidation;
     }
+
+
 
     public void setLoginValidation(LoginValidation loginValidation) {
         this.loginValidation = loginValidation;

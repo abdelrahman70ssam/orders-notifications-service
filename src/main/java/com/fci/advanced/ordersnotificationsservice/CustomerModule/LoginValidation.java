@@ -10,7 +10,7 @@ public class LoginValidation {
     CustomerDatabase database;
 
 
-//    @Autowired
+    @Autowired
     public  LoginValidation(CustomerDatabase database) {
         this.database = database;
     }

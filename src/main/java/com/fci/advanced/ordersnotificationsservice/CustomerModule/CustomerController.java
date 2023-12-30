@@ -1,19 +1,16 @@
 package com.fci.advanced.ordersnotificationsservice.CustomerModule;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@Component
 public class CustomerController {
     private CustomerBSL customerBSL;
-//    @Autowired
-    public CustomerController(){
-        customerBSL = new CustomerBSL();
-    }
 
+    @Autowired
     public CustomerController(CustomerBSL customerBSL) {
         this.customerBSL = customerBSL;
     }

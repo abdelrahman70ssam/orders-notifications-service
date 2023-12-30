@@ -2,16 +2,17 @@ package com.fci.advanced.ordersnotificationsservice.CustomerModule;
 
 
 public class Customer {
-    private String name ,username , password , email , phoneNumber;
+    private String name ,username , password , email , phoneNumber , location;
     private double balance ;
     private boolean accountStatus ;
 
-    public Customer(String name, String username, String password, String email, String phoneNumber, double balance) {
+    public Customer(String name, String username, String password, String email, String phoneNumber, String location, double balance) {
         this.name = name;
         this.username = username;
         this.password = password;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.location = location;
         this.balance = balance;
     }
 
